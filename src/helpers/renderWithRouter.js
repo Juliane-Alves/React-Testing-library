@@ -11,4 +11,4 @@ const renderWithRouter = (component) => {
 };
 export default renderWithRouter;
 
-// Estrutura retira do course;
+// Estrutura retirada do course;
