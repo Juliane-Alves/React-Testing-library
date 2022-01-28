@@ -7,9 +7,8 @@ describe('Teste o componente Favorite Pokemons', () => {
   beforeEach(() => {
     renderWithRouter(<FavoritePokemons />);
   });
-  test('Teste se é exibido na tela a mensagem "No favorite Pokemon foud', () => {
-    const noFavoriteMsg = screen.getByText('heading', {
-      name: /No favorite pokemon found/i });
+  test('Teste se é exibido na tela a mensagem "No favorite Pokemon found', () => {
+    const noFavoriteMsg = screen.getByText(/No favorite Pokemon found/i);
     expect(noFavoriteMsg).toBeInTheDocument();
   });
 });
