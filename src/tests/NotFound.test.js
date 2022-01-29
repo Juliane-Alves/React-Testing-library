@@ -8,7 +8,7 @@ describe('test o component notFound', () => {
     const { history } = renderWithRouter(<NotFound />);
     history.push('/xablau');
   });
-  test('Testa se a pagina contem um h2 ', () => {
+  test('Testa se a pagina contem um h2 com o texto "Page requested not found"', () => {
     const title = screen.getByRole('heading', { name: /page/i });
     expect(title).toBeInTheDocument();
     expect(title).toHaveTextContent(/page requested not found/i);
