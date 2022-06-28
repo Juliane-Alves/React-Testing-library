@@ -60,10 +60,11 @@ describe('test se as cartas dos pokemons estão renderizando corretamente', () =
     expect(container.firstChild).toMatchSnapshot();
     // Container(firstCHild) contém o container renderizado.
     // Sobre os testes que precisam de verificar os atributos, estava tentando fazer com o ToHaveAtributte e não funcionou,
-  /*  obtive orientação de Nicole Calderari sobre o metodo Snapshot que vai criar uma pasta "por baixo dos panos"
-    com o componente que estou usando e que vai conter as props, então nesse test se espera que os atributos estejam iguais
+  /*  obtive orientação de Nicole Calderari sobre o metodo Snapshot que vai criar um test instantaneo "por baixo dos panos"
+    ele compara a saída renderizada com o instantâneo anterior. Se eles corresponderem, o teste será aprovado.
     ao Snapshot */
     // snapshot foi usado em todos os tests que rerifica atributo//
+    // https://jestjs.io/docs/snapshot-testing
   });
   test('test se a imagem é renderizada com os atributos corretos', () => {
     renderWithRouter(<App />);
